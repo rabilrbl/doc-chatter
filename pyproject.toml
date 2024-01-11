@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "doc-chatter"
+packages = [
+    { include = "doc_chatter", from = "." },
+]
+version = "0.1.0"
+description = "Chat with your documents"
+authors = ["Mohammed Rabil <rabil@techie.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+llama-index = "^0.9.29"
+
+[tool.poetry.scripts]
+doc-chatter = "doc_chatter.main:start_doc_chatter"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
